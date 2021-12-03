@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+/* 兼容IE6、7 */
+.clearfix {
+    *zoom: 1;
+}
+
+body {
+    background-color: #fafafa;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    position: sticky;
+    top: 10px;
+    height: 42px;
+    /* background-color: pink; */
+    margin: 30px auto;
+}
+
+.logo {
+    float: left;
+    width: 200px;
+    height: 42px;
+    /* background-color: purple; */
+}
+
+.nav {
+    float: left;
+    margin-left: 50px;
+}
+
+.nav ul li {
+    float: left;
+    margin-left: 30px;
+}
+
+.nav ul li a {
+    display: inline-block;
+    height: 42px;
+    padding: 0 10px;
+    line-height: 42px;
+    color: #050505;
+    font-size: 16px;
+}
+
+.nav ul li a:hover {
+    border-bottom: 1px #00a4ff solid;
+    color:#00a4ff;
+}
+
+.search {
+    float: left;
+    width: 450px;
+    height: 42px;
+    margin-left: 50px;
+    background-color: skyblue;
+}
+
+.search input {
+    float: left;
+    width: 389px;
+    height: 40px;
+    border: 1px skyblue solid;
+    border-right: 0;
+    padding-left: 10px;
+    color: #bfbfbf;
+    font-size: 14px;
+    outline: none;
+}
+
+.search button {
+    float: left;
+    width: 50px;
+    background: url(images/btn.png);
+    height: 42px;
+    /* button默认是有边框的 */
+    border: 0px;
+}
+
+.user {
+    height: 42px;
+    float: right;
+    line-height: 42px;
+}
+
+.user img {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.banner {
+    height: 421px;
+    background-color: #1c036c;
+}
+
+.banner .w {
+    height: 421px;
+    background: url(images/banner.png);
+}
+
+.subnav {
+    float: left;
+    width: 190px;
+    height: 421px;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.subnav li {
+    /* 没有指定宽度使用padding时, width=继承-padding*2, 并不会撑大盒子 */
+    height: 46px;
+    line-height: 46px;
+    /* text-indent: 2em; */
+    padding: 0 20px;
+}
+
+.subnav li a {
+    color: #efefef;
+    font-size: 14px;
+}
+
+.subnav ul li a span {
+    float: right;
+}
+
+.subnav li a:hover {
+    color: #00a4ff;
+}
+
+.course {
+    float: right;
+    width: 230px;
+    height: 300px;
+    margin-top: 50px;
+}
+
+.course h3 {
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #efefef;
+    background-color: #00a4ff;
+}
+
+.learning {
+    padding: 0 20px;
+    height: 250px;
+    background-color: #efefef;
+}
+
+.learning ul li {
+    border-bottom: 1px solid #bfbfbf;
+    padding: 12px 0;
+}
+
+.learning ul li h4 {
+    font-size: 16px;
+    color: #4e4e4e;
+}
+
+.learning ul li p {
+    font-size: 12px;
+    color: #a5a5a5;
+}
+
+.learning>a {
+    display: block;
+    height: 38px;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 40px;
+    color: #00a4ff;
+    border: 1px #00a4ff solid;
+}
+
+.goods {
+    height: 50px;
+    box-shadow: 0px 4px 10px 2px rgba(0,0,0,.1);
+    margin-top: 30px;
+    background-color: #fff;
+    /* 行高可以继承，只需要给父级元素添加即可 */
+    line-height: 50px;
+}
+
+.goods .one {
+    float: left;
+    width: 170px;
+    height: 50px;
+    font-size: 16px;
+    margin-left: 20px;
+    color: #00a4ff;
+}
+
+.goods .two {
+    float: left;
+    width: 800px;
+    height: 50px;
+}
+
+.goods .two ul li {
+    float: left;
+    height: 50px;
+    /* 这里的margin是让前一个词与后一个'|'之间有一个距离 */
+    margin-right: 30px;
+}
+
+.goods .two ul li a{
+    font-size: 16px;
+    color: #000;
+    /* 这里的padding有两个作用: 1、协调词的长度不统一。2、让'|'与词之间有一个距离 */
+    padding-left: 30px;
+    border-left: 1px solid #ddd;
+}
+
+.goods .three {
+    float: right;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.goods .three a {
+    color: #00a4ff;
+    font-size: 14px;
+}
+
+.videolist {
+    margin-top: 30px;
+    /* 这里不方便给高度，因为.video高度不定 */
+    /* height: 560px; */
+}
+
+.intro {
+    /* 这里父盒子要指定高度, 因为两个浮动的子盒子会影响下面盒子的布局 */
+    height: 20px;
+    line-height: 20px;
+}
+
+.intro h3{
+    float: left;
+    font-size: 18px;
+    color: #333;
+}
+
+.intro a{
+    float: right;
+    font-size: 14px;
+    color: #aaa;
+    margin-right: 20px;
+}
+
+.video {
+    /* 宽度给大一点，把每行最后一个元素的margin也算进去 */
+    width: 1210px;
+    /* 这里不方便给高度, 因为视频可能有两行、三行、四行... */
+    /* overflow: hidden; */
+}
+
+.video .content {
+    position: relative;
+    float: left;
+    width: 232px;
+    height: 260px;
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px 3px rgba(0,0,0,.1);
+}
+
+.video .content img {
+    width: 100%;
+}
+
+.video .content .hot {
+    width: 40px;
+    position: absolute;
+    right: -4px;
+    top: 4px;
+}
+
+.video .content a h4 {
+    margin: 10px 15px;
+    color: #333;
+}
+
+.video .content span {
+    margin: 0px 15px;
+    color: #999;
+}
+
+.video .content em {
+    font-style: normal;
+    color: red;
+}
+
+
+.footer {
+    height: 200px;
+    margin-top: 30px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.footer .w {
+    /* 与父级元素footer紧贴, 造成外边距塌陷, 给父级元素设置overflow */
+    margin-top: 10px;
+}
+
+.footer .copyright {
+    float: left;
+    width: 400px;
+}
+
+.footer .copyright p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #999;
+}
+
+.footer .copyright a {
+    display: inline-block;
+    border: 1px #00a4ff solid;
+    padding: 5px 30px;
+    margin-top: 10px;
+    color: #00a4ff;
+}
+
+.footer .links {
+    float: right;
+    margin-right: 30px;
+}
+
+.footer .links dl {
+    float: right;
+    margin-left: 100px;
+}
+
+.footer .links dl dt {
+    margin-bottom: 10px;
+}
+
+.footer .links dl a {
+    color: #333;
+    font-size: 14px;
+}
+
+.toTop {
+    position: fixed;
+    left: 50%;
+    bottom: 10%;
+    margin-left: 600px;
+    width: 50px;
+    height: 50px;
+}
+
+.toTop img{
+    width: 100%;
+}
